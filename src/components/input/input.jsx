@@ -46,4 +46,5 @@ function mapDispatchToProps(dispatch) {
     translate: val => dispatch(translate(val)),
   };
 }
+
 export default connect(null, mapDispatchToProps)(Input);
