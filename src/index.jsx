@@ -5,7 +5,9 @@ import { createStore } from 'redux';
 
 import Input from './components/input/input';
 
-// const store = createStore(reducers);
+import reducers from './reducers';
+
+const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
