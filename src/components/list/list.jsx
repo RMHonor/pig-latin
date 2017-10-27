@@ -6,7 +6,7 @@ import './list.scss';
 const List = (props) => {
   if (!props.translations.length) return null;
   return (
-    <table>
+    <table className="translation-list">
       <thead>
       <tr>
         <th>Original</th>

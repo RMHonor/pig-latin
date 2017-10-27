@@ -1,0 +1,12 @@
+.translation-list {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  th, td {
+    width: 50%;
+    text-align: center;
+    border: 1px solid #b0bcbe
+  }
+}
