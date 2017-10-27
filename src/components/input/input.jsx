@@ -32,7 +32,7 @@ class Input extends Component {
 
   render() {
     return (
-      <form className="field" onSubmit={this.onSubmit}>
+      <form className="field" onSubmit={this.onSubmit} autoComplete="off">
         <label className="field__label" htmlFor="input">
           Enter text to translate
         </label>
