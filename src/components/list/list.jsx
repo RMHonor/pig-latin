@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import './list.scss';
+
 const List = (props) => {
   if (!props.translations.length) return null;
   return (
