@@ -1,24 +1,29 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
-const List = (props) => (
-  <table>
-    <thead>
+const List = (props) => {
+  if (!props.translations.length) return null;
+  return (
+    <table>
+      <thead>
       <tr>
         <th>Original</th>
-        <th>Translations</th>
+        <th>Translated</th>
       </tr>
-    </thead>
-    <tbody>
-      {props.translations.map(({ original, translation }, i) => (
+      </thead>
+
+      <tbody>
+      {props.translations.map(({original, translation}, i) => (
         <tr key={i}>
           <td>{original}</td>
           <td>{translation}</td>
         </tr>
       ))}
-    </tbody>
-  </table>
-);
+      </tbody>
+
+    </table>
+  );
+};
 
 function mapStateToProps({translations}) {
   return {
