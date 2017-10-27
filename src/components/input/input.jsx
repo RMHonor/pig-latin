@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import translate from '../../actions/translate';
 
+import './input.scss';
+
 class Input extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +33,11 @@ class Input extends Component {
   render() {
     return (
       <form className="field" onSubmit={this.onSubmit}>
-        <label className="field__label">
+        <label className="field__label" htmlFor="input">
           Enter text to translate
-          <input className="field__input" type="text" name="input" onChange={this.updateInputValue} value={this.state.inputValue}/>
         </label>
-        <button type="submit">Translate</button>
+        <input className="field__input" type="text" name="input" onChange={this.updateInputValue} value={this.state.inputValue}/>
+        <button type="submit" className="field__submit">Translate</button>
       </form>
     );
   }

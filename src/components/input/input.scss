@@ -1,0 +1,28 @@
+.field {
+  margin-bottom: 40px;
+
+  &__label {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__input {
+    display: block;
+    width: 95%;
+    max-width: 400px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 10px auto;
+    font-size: 18px;
+  }
+
+  &__submit {
+    display: block;
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+}
