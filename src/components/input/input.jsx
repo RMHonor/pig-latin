@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-const Input = (props) => (
-  <div className="field">
-    <label className="field__label">
-      Enter text to translate
-      <input className="field__input" type="text" onSubmit={(val) => props.submit(val)}/>
-    </label>
-  </div>
-);
+import translate from '../../actions/translate';
 
-export default connect(null, null)(Input);
+class Input extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: '',
+    };
+
+    this.updateInputValue = this.updateInputValue.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  updateInputValue(evt) {
+    this.setState({
+      inputValue: evt.target.value,
+    })
+  }
+
+  onSubmit(evt) {
+    evt.preventDefault();
+    this.props.translate(this.state.inputValue);
+    this.setState({
+      inputValue: '',
+    });
+  }
+
+  render() {
+    return (
+      <form className="field" onSubmit={this.onSubmit}>
+        <label className="field__label">
+          Enter text to translate
+          <input className="field__input" type="text" name="input" onChange={this.updateInputValue} value={this.state.inputValue}/>
+        </label>
+        <button type="submit">Translate</button>
+      </form>
+    );
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    translate: val => dispatch(translate(val)),
+  };
+}
+export default connect(null, mapDispatchToProps)(Input);
