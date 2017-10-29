@@ -16,6 +16,6 @@ React and ES6 code into cross-platform ES5 code.
 
 * To run this application in development, run `npm start` from the console. It is advised to use Node 8+ (NPM 5+) to
 make use of the package version locking.
-** Navigate to `localhost:8080`
+  * Navigate to `localhost:8080`
 * To build this application for production, run `npm run build`. This will create a `/dist` folder with the bundled
 JS and HTML
