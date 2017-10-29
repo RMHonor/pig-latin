@@ -4,8 +4,8 @@
   "description": "Pig latin translator in react",
   "main": "src/index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
-    "build": "NODE_ENV=production webpack"
+    "start": "webpack-dev-server --config webpack.dev.js --hot --inline",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,9 @@
     "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.0"
   }
 }
