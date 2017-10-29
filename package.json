@@ -4,7 +4,8 @@
   "description": "Pig latin translator in react",
   "main": "src/index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline"
+    "start": "webpack-dev-server --hot --inline",
+    "build": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
