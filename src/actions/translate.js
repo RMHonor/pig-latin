@@ -20,6 +20,6 @@ function pigLatin(word) {
   if (word.match(vowelStart)){
     return word + 'way';
   } else {
-    return word.substr(1 - word.length) + word.charAt(0) + 'ay';
+    return word.substr(1) + word.charAt(0) + 'ay';
   }
 }
